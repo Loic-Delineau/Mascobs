@@ -2,7 +2,7 @@
 A fully-featured program built to **Ma**ke **sc**hool **obs**olete.
 
 <p align="center">
-    <img src="./assets/mascobs-logo.png" width="200">
+    <img src="./assets/mascobs-logo.png" width="500">
 </p>
 
 ### Author
