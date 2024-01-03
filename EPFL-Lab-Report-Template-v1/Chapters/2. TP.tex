@@ -1,0 +1,355 @@
+\section{TP - Electrical and Optical Characterization}
+\label{sec:TP}
+
+
+% =========================================================================  %                                                                  OBJECTIVES
+% =========================================================================
+\subsection{Objective}
+This TP has the objective of characterizing how patterns are produced with different techniques of microfabrication. We will look at a process with standard photolithography with positive photoresist and PVD from Topic  compared to using negative photoresist and lift-off from topic . We will also determine how well our aligment was before exposure in the cleanroom session from Topic .
+
+% We will secondly look at alignment from the cleanroom mask alignment in section. 
+
+% =========================================================================
+%                            MATERIALS AND EQUIPEMENTS
+% =========================================================================
+\subsection{Materials et Equipements}
+\begin{itemize}
+    \item \textbf{Optical Microscope:}
+    \begin{itemize}
+        \item Model: Keyence Digital Microscope.
+        \item Purpose: To observe and photograph the alignment of Vernier scales and to measure the dimensions of aluminum patterns.
+    \end{itemize}
+
+    \item \textbf{Probe Station:}
+    \begin{itemize}
+        \item Model: Karl Suss PM6 Probe Station.
+        \item Purpose: To hold and position the sample for electrical measurements using probe tips.
+    \end{itemize}
+
+    \item \textbf{Nano\_Volt/Micro\_Ohm Meter:}
+    \begin{itemize}
+        \item Model: Keysight 34420A.
+        \item Purpose: To measure resistance values directly in the four-wire (4W) mode during electrical characterization.
+    \end{itemize}
+
+    \item \textbf{Probe Tips:}
+    \begin{itemize}
+        \item Types: Two for current injection (labeled I1 and I2) and two for voltage measurement (labeled V1 and V2).
+        \item Purpose: To inject current and measure the voltage drop on the sample's specific contact pads.
+    \end{itemize}
+
+    \item \textbf{Wafer with Aluminum Thin Film:}
+    \begin{itemize}
+        \item Composition: Aluminum resistors obtained by chemical etching and lift-off methods.
+        \item Purpose: To serve as the subject for electrical resistance and sheet resistance measurements.
+    \end{itemize}
+
+    \item \textbf{Cleaning Solvents and Materials:}
+    \begin{itemize}
+        \item Types: Appropriate solvents for cleaning the sample and materials like wipes and tweezers.
+        \item Purpose: To ensure the sample is clean and free of contaminants before characterization.
+    \end{itemize}
+\end{itemize}
+
+
+\pagebreak
+% =========================================================================
+%                            PROTOCOL
+% =========================================================================
+\subsection{Protocol}
+\subsubsection{Description of Protocol Steps}
+\begin{enumerate}
+    \item Optical Characterization:
+    \begin{enumerate}
+        \item Preparation: Ensure the sample is clean and the second-level photoresist is aligned on the patterned first-level wafer.
+        \item Vernier Alignment Check:
+        \begin{enumerate}
+            \item Place the wafer under the Keyence digital microscope.
+            \item Locate the Vernier scale at the specified (x,y) position.
+            \item Observe and photograph the alignment of the central long lines of the Vernier. Note any misalignment by counting the first aligned red and blue lines from the central long line and calculate the misalignment using the offset of 0.2 µm.
+        \end{enumerate}
+        \item Dimension Measurement:
+        \begin{enumerate}
+            \item Observe and photograph the aluminum patterns obtained by etching and lift-off processes.
+            \item Measure and compare the dimensions of the same pattern under the same magnification.
+            \item Record any differences between the patterns obtained by the two methods.
+        \end{enumerate}
+    \end{enumerate}
+    
+    \item Electrical Characterization:
+    \begin{enumerate}
+        \item Transmission Line Method (TLM):
+        \begin{enumerate}
+            \item Place the sample on the Karl Suss PM6 Probe station.
+            \item Position two probe tips (I1 and I2) for current injection and two (V1 and V2) for voltage measurement on the corresponding pads under an optical microscope.
+            \item Activate the 4W mode on the Keysight 34420A Nano\_Volt/Micro\_Ohm Meter to display the resistance value.
+            \item Record the resistance measurements for various lengths (L) and calculate the slope of the R versus L curve.
+        \end{enumerate}
+        
+        \item Sheet Resistance Measurement:
+        \begin{enumerate}
+            \item Position probe tips on the specified pads for current injection (pads 1 and 2) and voltage measurement (pads 3 and 4).
+            \item Record the resistance value displayed and calculate the square resistance.
+            \item Fill in the table with Rs values for different structures, compare these values, and calculate the width of the measured structure.
+            \item Compare the calculated width to the optical measurement and the value registered on the photomask.
+            \item Determine the resistivity of the aluminum film based on its thickness and the sheet resistance.
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+\subsubsection{Schematic}
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.5\textwidth}         % 0.5 is the size of the figure
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Example of Aligned Vernier}
+\end{minipage}
+\end{figure}
+
+
+\pagebreak
+
+\subsubsection{Explanation of Measurement Method}
+\subsubsection*{Optical Characterization}
+
+\begin{enumerate}
+    \item Vernier Alignment Check:
+    \begin{itemize}
+        \item \textbf{Objective:} To determine the alignment accuracy of patterns on the substrate using Vernier scales, which are designed to detect minute alignment errors.
+        \item \textbf{Process:} The Vernier scale in our design consists of two structures: one with lines and spaces of different widths (blue structure) and another with equal widths (red structure). The difference in pitch between these two structures (0.2 µm) defines the resolution of the Vernier. Under an optical microscope, we observed the alignment of the central long lines. Perfect alignment is indicated when these central lines of the blue and red structures match. Misalignments are quantified by locating the first point where the red and blue lines align and then counting its position from the central line. The misalignment is calculated by multiplying the position number by the offset (0.2 µm).
+    \end{itemize}
+\end{enumerate}
+
+\subsubsection*{Electrical Characterization}
+
+\begin{enumerate}
+    \item Transmission Line Method (TLM):
+    \begin{itemize}
+        \item \textbf{Objective:} To characterize the resistive properties of aluminum thin films using a four-point probe method.
+        \item \textbf{Process:} This method involves placing the sample on the Karl Suss PM6 Probe station and positioning two probe tips (I1 and I2) for current injection and two (V1 and V2) for voltage measurement on the corresponding pads. The 4W mode on the Keysight 34420A Nano\_Volt/Micro\_Ohm Meter is activated to display the resistance value directly. The resistance measurements for various lengths (L) are recorded, and the slope of the R versus L curve is calculated to understand the resistive behavior of the material.
+    \end{itemize}
+    
+    \item Sheet Resistance Measurement:
+    \begin{itemize}
+        \item \textbf{Objective:} To measure the sheet resistance of the aluminum thin films and calculate their resistivity.
+        \item \textbf{Process:} Probe tips are positioned on specific pads for current injection and voltage measurement. The resistance value displayed is used to calculate the square resistance using the provided formula. 
+        
+        \[R_s = \frac{\pi}{ln(2)} \frac{V_{34}}{I_{12}}\]
+        
+        The Rs values for different structures are compared, and the width of the measured structure is calculated. This width is then compared to the optical measurement and the value registered on the photomask. Finally, the resistivity of the aluminum film is determined based on its thickness and the sheet resistance.
+    \end{itemize}
+\end{enumerate}
+
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.35\textwidth}         % 0.5 is the size of the figure
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Illustration of the 4 Point Probe to determine an unbiased resistance.}
+\end{minipage}
+\end{figure}
+
+
+
+
+
+
+\pagebreak
+% =========================================================================
+%                            RESULTS AND ANALYSIS
+% =========================================================================
+\subsection{Results and Analysis}
+\subsection*{Alignment error}
+The following tables \ref{table: Vernier} and \ref{table:software} include the measured misalignment using vernier structures and misalignment numbers generated by software respectively.
+\begin{table}[ht]
+    \rowcolors{2}{Tue-red!10}{white}
+    \centering
+    \caption{Measurement using Vernier}
+    \begin{tabular}[t]{|c|c|c|c|c|c|}
+        \toprule
+         \color{Tue-red}\textbf{Vernier coordinates (x,y) }&\color{Tue-red}\textbf{(0,28)}&\color{Tue-red}\textbf{(28,0)}&\color{Tue-red}\textbf{(-28,0)}&\color{Tue-red}\textbf{(0,-28)} & \color{Tue-red}\textbf{(0,0)}\\
+        \midrule
+        $\Delta$x [nm]&1800&3000&3000&1000& 2000\\
+        $\Delta$y [nm]&1800&200&1200&600& 1000\\
+        \bottomrule
+    \end{tabular}
+    \label{table: Vernier}
+\end{table}
+\begin{table}[ht]
+    \rowcolors{2}{Tue-red!10}{white}
+    \centering
+    \caption{Measurement using Software}
+    \begin{tabular}[t]{|c|c|c|c|c|c|}
+        \toprule
+         \color{Tue-red}\textbf{Vernier coordinates (x,y) }&\color{Tue-red}\textbf{(0,28)}&\color{Tue-red}\textbf{(28,0)}&\color{Tue-red}\textbf{(-28,0)}&\color{Tue-red}\textbf{(0,-28)} & \color{Tue-red}\textbf{(0,0)}\\
+        \midrule
+        $\Delta$x [nm]&2200&3200&2400&1100& 2100\\
+        $\Delta$y [nm]&2200&340&1250&700& 800\\
+        \bottomrule
+    \end{tabular}
+    \label{table:software}
+\end{table}
+
+As one can see in \cref{table: Vernier} and \cref{table:software}, there is a significant misalignment, both for the manual measurements and the software's approximation.
+What we can see though, is by substracting the offset in the middle Vernier to the others, that gives us a vector in which each edge moved. Specifically, if we look at both extremities of the X-axis (28,0) and (-28,0), we observe that each have a relative offset of 400nm in opposite directions of the Y-axis. This indicates that the second layer is rotated compared to the second one in a clockwise-manner.
+
+% Example of one single figure
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.28\textwidth}         % 0.5 is the size of the figure
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Vernier (0,28)}
+  \label{fig: style 2 image f}
+\end{minipage}
+\end{figure}
+
+\vspace{-5mm}
+% Example of one multiple figures
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.28\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Vernier (-28,0)}
+  \label{fig:defect liftoff}
+\end{minipage}
+\hfill
+\begin{minipage}{0.28\textwidth}         % 0.5 is the size of the figure
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Vernier (0,0)}
+  \label{fig: style 2 image d}
+\end{minipage}
+\hfill
+\begin{minipage}{0.28\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Vernier (28,0)}
+  \label{fig: style 2 image e}
+\end{minipage}
+\end{figure}
+
+\vspace{-5mm}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.28\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{Vernier (0,-28)}
+  \label{fig: style 2 image g}
+\end{minipage}
+\end{figure}
+
+
+\subsection*{Electrical characterization}
+
+\begin{table}[h!]
+    \centering
+    \caption{Transmission line lengths and measured corresponding resistances.}
+    \resizebox{\textwidth}{!}{
+        
+        \begin{tabular}{cccccccc}
+            \toprule
+            \rowcolor{gray!50}
+            \textbf{Contact} & \textbf{V1-V2} & \textbf{V1-V3} & \textbf{V2-V3} & \textbf{V2-V4} & \textbf{V3-V4} & \textbf{V4-V5} & \textbf{Width[$\mu$m]} \\
+            \midrule
+            \textbf{L[$\mu$]} & 400 & 750 & 300 & 550 & 200 & 100 &  \\
+            \rowcolor{gray!20}
+            \textbf{R [$\Omega$]} & 2.13 & 3.75 & 1.6 & 2.74 & 1.12 & 0.62 & 10 \\
+            \textbf{R [$\Omega$]} & 0.227 & 0.401 & 0.176 & 0.297 & 0.112 & 0.070 & 80 \\
+            \rowcolor{gray!20}
+            \textbf{R [$\Omega$]} & 0.618 & 1.08 & 0.472 & 0.847 & 0.335 & 0.194 & 30 \\
+            \textbf{R [$\Omega$]} & 0.95 & 1.69 & 0.73 & 1.25 & 0.51 & 0.29 & 20 \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.5\textwidth}         % 0.5 is the size of the figure
+      \centering
+      \includegraphics[width=\textwidth]{example-image-a}
+      \captionof{figure}{Plotted resistances for each line and the resistance per length obtained by regression.}
+       \label{fig:Graph_rl}
+    \end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.35\textwidth}         % 0.5 is the size of the figure
+      \centering
+      \includegraphics[width=\textwidth]{example-image-a}
+      \captionof{figure}{layout of resistor patterns}
+    \end{minipage}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+    \caption{Sheet resistance of the metal}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Structure} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} & \textbf{G} & \textbf{H} \\ \hline
+        \textbf{Rs[$\Omega$]} & 0.04011 & 0.03961 & 0.04079 & 0.03897 & 0.03943 & 0.038071 & 0.03988 & 0.04033 \\ \hline
+    \end{tabular}
+\end{table}
+We see that the value of Rs is practically the same for all the patterns, with little variation. Thereby, we have a good approximation of the resistivity of the metal film, and furthermore, it reveals that the film thickness should be rather uniform across the whole surface.
+The average value and their standard variation are summed up in table \ref{fig:SheetRes}.
+
+\begin{table}[h!]
+    \centering
+    \caption{}
+    \label{fig:SheetRes}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Film sheet resistance} & \textbf{$\mu$} & \textbf{$\sigma$} \\ \hline
+        \textbf{Rs[$\Omega$]} & 0.03965 & 0.00079 \\ \hline
+    \end{tabular}
+    \label{mean1}
+\end{table}
+\pagebreak
+We derived the width of the measured structure from the slope of the graph R vs L (figure \ref{fig:Graph_rl}), and Rs. The formula is: slope= Rs/W
+Here is the width calculated and the one obtained from the optical measurement: \\
+\begin{table}[h!]
+    \centering
+    \caption{}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Width registered on photomask[$\mu$m]} & \textbf{10} & \textbf{20} & \textbf{30} & \textbf{80}\\ \hline
+        \textbf{Width calculated [$\mu$m]} & 8.26 & 18.88 & 28.32 & 79.296 \\ \hline
+        \textbf{Width obtained by optical measurement[$\mu$m]} & 10.04 & 20.12 & 29.87 & 78.91\\ \hline
+    \end{tabular}
+    \label{mean2}
+\end{table} 
+\\
+The data obtained from optical measurements closely align with the theoretical values anticipated from the design parameters. This close correlation suggests that the optical measurement technique employed is highly accurate and reliable for assessing microscale features. Additionally, the widths calculated using sheet resistance (Rs) are also in close agreement with the expected values. The two methods have approximately the same precision to measure the width.
+
+\subsection*{Resistivity of the film}
+$\rho$=Rs*T, $\rho$: Resistivity of the film, T: thickness of the film is 0.711 $\mu$m, gathered from the profilometry measured in profilometry figure. Using our calculated value for Rs we obtain a resistivity of $2.82 * 10^{-8} \ \Omega \cdot m$ for the aluminium film. This is really close to the the value of aluminum at 300 K : 2.8 $* 10^{-8} \ \Omega \cdot m$(Wikipedia).
+
+
+
+%=========================================================================
+%                            CONCLUSION
+% =========================================================================
+
+% FROM 'LES CONCIGNES'
+%V. Conclusion générale (après la présentation des 6 sujets)
+% a. Quelles sont les différentes techniques de caractérisation que vous avez utilisées
+% durant votre TP ?
+% b. Les différentes résines que vous avez utilisées ?
+% c. Quelle est l’utilité de la salle blanche ?
+% d. Que signifie la classe d’une salle blanche ?
+% e. Dire ce que vous pensez de vos résultats et du TP de façon général.
+% VI. Références
+
+\subsection{Conclusion}
+In this topic, we evaluated the alignment error of our photomask employing two distinct methodologies. Initially, we utilized the software's inherent tools for direct error measurement, then we used the Vernier scales. Both approaches yielded comparably accurate results.
+
+Subsequently, we implemented the Transmission Line Method to ascertain the resistance across various layouts of resistors, from them we derived the plot of R vs L (graph from Figure 6.8). We then measured the sheet Resistance of various structures to determine Rs. Our findings indicated that the specific structure of these elements had no discernible effect on the value of Rs.
+Lastly, by leveraging the slope derived from Figure 6.8 and the known Rs value, we calculated the widths of the structures. The results obtained closely mirrored theoretical expectations, akin to those acquired through optical measurement techniques.
+We finally calculated the resistivity of the film : $2.82 * 10^{-8} \ \Omega \cdot m$. 

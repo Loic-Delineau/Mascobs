@@ -1,0 +1,175 @@
+\section{Template Section}
+\label{sec:Template}       % use below command to reference this section
+                           % \cref{sec:Template}
+
+% =========================================================
+%                        SECTIONS 
+% =========================================================
+\subsection{This is a subsection}
+    \subsubsection{This is a subsubsection}
+    This is text.
+
+% =========================================================
+%                  GENERAL FORMATTING
+% =========================================================
+\subsection{General formatting}
+Firstly, the document uses the font mlmodern, using no indent for new paragraphs and commonly uses the color \textcolor{Tue-red}{Tue-red}.
+The \texttt{hyperref} package is responsible for highlighting and formatting references like figures and tables. For example \cref{table: style 1} or \cref{fig: three images}. It also works for citations \cite{texbook}. Note how figure numbers are numbered according to the format \texttt{<chapter number>.<figure number>}.\\
+
+% =========================================================
+%                       Bulleted Lists 
+% =========================================================
+\subsection{Bulleted Lists}
+Bullet lists are also changed globally, for a maximum of 3 levels:
+
+\begin{itemize}
+    \item Item 1
+    \begin{itemize}
+        \item subitem 1
+        \begin{itemize}
+            \item subsubitem 1
+            \item subsubitem 2
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+Similarly numbered lists are also changed document wide:
+
+\begin{enumerate}
+    \item Item 1
+    \item Item 2
+    \begin{enumerate}
+        \item subitem 1
+        \begin{enumerate}
+            \item subsubitem 1
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+
+% =========================================================
+%                         TABLES 
+% =========================================================
+\subsection{Tables}
+The following table, \cref{table: style 1}, shows a possible format for tables in this document. Alternatively, one can also use the black and white version of this, shown in \cref{table: style 2}. Note that caption labels are in the format \textbf{\textcolor{Tue-red}{Table x.y:} }
+
+% Table 1 (style 1) ---------------------------
+\begin{table}[ht]
+    \rowcolors{2}{Tue-red!10}{white}
+    \centering
+    \caption{A table without vertical lines.}
+    \begin{tabular}[t]{ccccc}
+        \toprule
+        \color{Tue-red}\textbf{Column 1}&\color{Tue-red}\textbf{Column 2}&\color{Tue-red}\textbf{Column 3}&\color{Tue-red}\textbf{Column 4}&\color{Tue-red}\textbf{Column 5}\\
+        \midrule
+        Entry 1&1&2&3&4\\
+        Entry 2&1&2&3&4\\
+        Entry 3&1&2&3&4\\
+        Entry 4&1&2&3&4\\
+        \bottomrule
+    \end{tabular}
+    \label{table: style 1}
+\end{table}
+
+% Table 2 (style 2) ---------------------------
+\begin{table}[ht]
+    \rowcolors{2}{gray!10}{white}
+    \centering
+    \caption{A table without vertical lines.}
+    \begin{tabular}[t]{ccccc}
+        \toprule
+        \textbf{Column 1}&\textbf{Column 2}&\textbf{Column 3}&\textbf{Column 4}&\textbf{Column 5}\\
+        \midrule
+        Entry 1&1&2&3&4\\
+        Entry 2&1&2&3&4\\
+        Entry 3&1&2&3&4\\
+        Entry 4&1&2&3&4\\
+        \bottomrule
+    \end{tabular}
+    \label{table: style 2}
+\end{table}
+
+
+% =========================================================
+%                        FIGURES 
+% =========================================================
+\subsection{Figures}
+For normal, single image figures, the standard \texttt{\textbackslash begin\{figure\}} environment can be used. 
+
+% Single Figure -------------------------------------------
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{example-image-a}
+    \label{fig: style 0 image a}
+    \caption{Single image}
+\end{figure}
+
+
+% Multi-Figure (linked captions) --------------------------
+For multi-image figures, one could use either the \texttt{\textbackslash begin\{subfigure\}} environment to get a main caption with 3 subcaptions like \cref{fig: three images}:
+
+\begin{figure}[h]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{example-image-a}
+         \caption{image a}
+         \label{fig: style 1 image a}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{example-image-b}
+         \caption{image b}
+         \label{fig: style 1 image b}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{example-image-c}
+         \caption{image c}
+         \label{fig: style 1 image c}
+     \end{subfigure}
+        \caption{Three images}
+        \label{fig: three images}
+\end{figure}
+
+
+% Multi-Figure (independant captions) ---------------------------
+ Or one could use the \texttt{\textbackslash begin\{minipage\}} environment to get 3 independent captions like \cref{fig: style 2 image a} - \ref{fig: style 2 image c}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.3\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-a}
+  \captionof{figure}{image a}
+  \label{fig: style 2 image a}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-b}
+  \captionof{figure}{image b}
+  \label{fig: style 2 image b}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{example-image-c}
+  \captionof{figure}{image c}
+  \label{fig: style 2 image c}
+\end{minipage}
+\end{figure}
+
+
+% =========================================================
+%                      REFERENCES (citations)
+% =========================================================
+\subsection{Citations}
+Here is some info that I got from Donald E. Knuth \cite{texbook}. \\
+The citations will be displayed in the last chapter of the pdf (References). They are defined in the References.bib document in the /General folder. \\
+\\
+If you didn't fully understand everything, this is a reference to \cref{sec:Template}, try clicking it in the .pdf. 
+
+

@@ -1,0 +1,91 @@
+% =================================================================
+% =================================================================
+% =================================================================
+% =================================================================
+% =================================================================
+%                   DO NOT TOUCH THIS DOCUMENT
+% =================================================================
+% =================================================================
+% =================================================================
+% =================================================================
+% =================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\documentclass[a4paper, table]{article}
+\input{General/Preamble} % Loads in the preamble 
+\input{General/Settings} % Loads in user defined settings
+\begin{document}
+
+% Inserts the front page
+\input{Chapters/0. Frontpage}
+\newpage
+
+% Generates a ToC without page number
+{\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
+\tableofcontents\thispagestyle{empty}}
+\newpage
+
+% Insert (Z. Template) section
+\input{Chapters/Z. Template}
+\newpage
+
+% Insert (1. General Introduction) section
+\input{Chapters/1. General Introduction}
+\newpage
+
+% Creates (2. TP) section
+\input{Chapters/2. TP}
+\newpage
+
+% Insert (9. General Conclusion) section
+\input{Chapters/9. General Conclusion}
+\newpage
+
+
+
+
+% ==========================================================
+%       ADDITIONAL CHAPTER FOR BIBLIOGRAPHY    
+% ==========================================================
+% Creates references using the Biblatex 
+\bibliographystyle{plain}
+\bibliography{General/References.bib}
+
+
+
+% ==========================================================
+%       ADDITIONAL CHAPTER FOR APPENDIX 
+% ==========================================================
+% Any section after this command will have a letter as an index
+\appendix   
+
+%% Adds an appendix entry
+\newpage
+\input{Chapters/A. Appendix}
+\newpage
+
+\end{document}
