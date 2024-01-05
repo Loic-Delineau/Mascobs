@@ -34,7 +34,7 @@ echo -n "$url" > temp_encode.txt
 # use sed to remove all white space and then preprend it to our temporary file
 base64 file.tex | awk '{a=a s $0;s=" "}END{print a}' | sed 's/ *//g' >> temp_encode.txt
 
-# We output out file to stdout and pipe it into xargs who passes it 
+# We output file to standard output and pipe it into xargs who passes it 
 # as an argument to xdg-open who itself opens it with the default browser
 cat temp_encode.txt | xargs xdg-open
 

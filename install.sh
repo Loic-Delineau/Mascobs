@@ -69,15 +69,26 @@ sed -i '/^desktop.ini.*/d' windows_users.txt
 echo ""
 echo ""
 echo "The program now expects your Windows User name to be:"
+
+# Works only if there is 1 user on the windows machine
 cat windows_users.txt
+
+path="/mnt/c/Users/"
+path="$path`cat windows_users.txt`"
+path="$path/Desktop"
+
 echo ""
 echo "The program will therefore save all the .pdfs it generates in:"
-echo "/mnt/c/Users/`cat windows_users.txt`/Desktop"
-echo ""
+echo "$path"
+rm windows_users.txt
+
 echo "As a proof of concept, the program just generate a file called:"
 echo "lol.txt"
 echo "and saved it on yours Windows desktop, go make sure it's there!"
 echo ""
-echo "lies, it didnt do it! I'm late on the script"
+cd $path
+touch lol.txt
+echo "Great! The program knows where your desktop is, happy LaTeXing!!" > lol.txt
+
 
 
